@@ -9,10 +9,8 @@ let score = document.getElementById("score");
 
 let highscore = document.getElementById("highscore");
 let scoreVal = 0;
-// highscore.textContent = scoreVal;
 guesses = 20;
 score.textContent = guesses;
-// document.querySelector(".number").textContent = '?';
 checkBtn.addEventListener("click", () => {
   const guess = parseInt(document.getElementById("guess").value);
   if (guesses === 0) {
@@ -41,10 +39,8 @@ checkBtn.addEventListener("click", () => {
 againBtn.addEventListener("click", () => {
   guesses = 20;
   score.textContent = guesses;
-  // highscore.textContent = scoreVal;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".number").textContent = "?";
-  // document.querySelector(".number").textContent = secretNumber;
   message.textContent = "Start Guessing ...";
   document.getElementById("guess").value = "";
   document.querySelector("body").style.backgroundColor = "black";
